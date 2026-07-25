@@ -24,7 +24,7 @@ A Retrieval-Augmented Generation (RAG) system that lets anyone ask plain-languag
 <div align="center">
 
 ![Demo](docs/screenshot.png)
-*(chat interface — add your screenshot to `docs/screenshot.png`)*
+
 
 </div>
 
