@@ -2,7 +2,7 @@
 
 A Retrieval-Augmented Generation (RAG) chatbot that answers questions about the Constitution of Pakistan in plain language, with accurate article-level citations — built entirely with free, open-source tools.
 
-🔗 **Live demo:** _(add your Streamlit Cloud link here after deployment)_
+🔗 **Live demo:** https://pak-constitution-bot.streamlit.app/
 
 ## Features
 
