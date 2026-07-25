@@ -4,6 +4,13 @@ Streamlit chat interface for the Pakistan Constitution Q&A Assistant.
 """
 
 import streamlit as st
+import os
+
+# On Streamlit Cloud, secrets come via st.secrets. Locally, they come from .env.
+# This bridges the two so qa_chain.py's os.getenv() works in both environments.
+if "GOOGLE_API_KEY" in st.secrets:
+    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+
 from qa_chain import load_vectorstore, load_article_index, load_page_index, build_llm, answer_question
 
 st.set_page_config(page_title="Pakistan Constitution Q&A", page_icon="📜", layout="wide")
