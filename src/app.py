@@ -98,8 +98,23 @@ if question:
 
     with st.chat_message("assistant", avatar="📜"):
         with st.spinner("Reading the Constitution..."):
-            answer, pages = answer_question(question, vectorstore, llm, article_index, page_index)
-            st.markdown(answer)
+            try:
+                answer, pages = answer_question(question, vectorstore, llm, article_index, page_index)
+                st.markdown(answer)
+            except Exception as e:
+                error_text = str(e).lower()
+                if "quota" in error_text or "resourceexhausted" in error_text or "429" in error_text:
+                    answer = (
+                        "⚠️ This app has hit its free daily usage limit for now. "
+                        "Please try again in a little while — the limit resets automatically.\n\n"
+                        "*This is a limitation of the free-tier API, not a bug in the app.*"
+                    )
+                else:
+                    answer = (
+                        "⚠️ Something went wrong while generating a response. "
+                        "Please try rephrasing your question or try again shortly."
+                    )
+                st.markdown(answer)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
     st.rerun()
