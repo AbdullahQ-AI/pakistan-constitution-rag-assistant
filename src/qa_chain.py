@@ -70,7 +70,7 @@ def build_llm():
     api_key = os.getenv("GOOGLE_API_KEY")
     if not api_key:
         raise ValueError("GOOGLE_API_KEY not found. Check your .env file.")
-    return ChatGoogleGenerativeAI(model="gemini-flash-latest", google_api_key=api_key, temperature=0)
+    return ChatGoogleGenerativeAI(model="gemini-flash-lite-latest", google_api_key=api_key, temperature=0)
 
 
 def keyword_boost_search(question, vectorstore, k=5):

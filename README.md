@@ -79,10 +79,30 @@ Building this surfaced several non-obvious real-world RAG problems:
 
 ## 🧪 Testing
 
-Manually tested with 20+ questions across:
-- **Direct article lookups** (Articles 9, 19, 25, 62, 175, 199...)
-- **Conceptual questions** (PM qualifications, amendment process, judiciary structure)
-- **Off-topic / edge cases** — verified the system declines rather than hallucinating
+## 🧪 Testing
+
+An automated evaluation script (`src/evaluate.py`) checks the pipeline against a fixed test set:
+
+<div align="center">
+
+| Test Category | Result |
+|:---:|:---:|
+| Citation Accuracy (15 questions) | **15/15 (100%)** |
+| Off-Topic Refusal (4 questions) | **4/4 (100%)** |
+| **Overall** | **19/19 (100%)** |
+
+</div>
+
+Test categories:
+- **Direct article lookups** (Articles 9, 19, 25, 62, 175, 199...) — verifies exact citation accuracy
+- **Conceptual questions** (PM qualifications, amendment process, judiciary structure) — verifies semantic + keyword retrieval
+- **Off-topic / edge cases** (fake articles, unrelated topics) — verifies the system declines rather than hallucinating
+
+Run it yourself:
+```bash
+python src/evaluate.py
+```
+
 
 ## ⚡ Running Locally
 
