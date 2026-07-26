@@ -79,8 +79,6 @@ Building this surfaced several non-obvious real-world RAG problems:
 
 ## 🧪 Testing
 
-## 🧪 Testing
-
 An automated evaluation script (`src/evaluate.py`) checks the pipeline against a fixed test set:
 
 <div align="center">
