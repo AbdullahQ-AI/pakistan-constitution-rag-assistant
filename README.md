@@ -77,6 +77,8 @@ Building this surfaced several non-obvious real-world RAG problems:
 | Answers split across chunk boundaries (e.g. PM qualifications spanning Art. 90–91) | Switched to page-level retrieval with neighboring-page expansion |
 | Free-tier Gemini models kept getting deprecated mid-project | Switched to `-latest` model aliases |
 
+📋 See [CHANGELOG.md](CHANGELOG.md) for the full development history and version-by-version fixes.
+
 ## 🧪 Testing
 
 An automated evaluation script (`src/evaluate.py`) checks the pipeline against a fixed test set:
