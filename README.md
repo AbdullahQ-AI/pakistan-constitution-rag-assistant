@@ -146,3 +146,7 @@ This tool is for informational and educational purposes only. It is **not** a su
 <i>⭐ Star this repo if you find it useful!</i>
 
 </div>
+
+---
+
+© 2026 Abdullah Qadeer. All rights reserved. This code is publicly visible for portfolio and educational demonstration purposes only. Reuse, redistribution, or claiming this work as your own is not permitted without explicit permission.
